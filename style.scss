@@ -3,7 +3,6 @@
 
 //
 // IMPORTS
-//
 
 @import "reset";
 @import "open-color";
@@ -32,6 +31,16 @@ body {
   width: 100%;
 }
 
+.post h1 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5em
+}
+
+.post h1 a {
+  color: #515151
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 2em;
   margin: 1em 0 16px;
@@ -48,6 +57,7 @@ h1, h2, h3, h5 {
 
 h1 {
   font-size: 30px;
+
   a {
     color: inherit;
   }
@@ -276,11 +286,12 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-//  color: $selection-color;
+  //  color: $selection-color;
   background: $selection-background-color;
 }
+
 ::selection {
-//  color: $selection-color;
+  //  color: $selection-color;
   background: $selection-background-color;
 }
 
@@ -288,12 +299,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 // Alignment
@@ -320,15 +331,16 @@ img {
 
 .wrapper-sidebar {
   width: 30%;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-color: $background-color;
-	height: 100%;
-	top: 0;
-	left:0;
-	position: fixed;
-	z-index: 4;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: $background-color;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 4;
   border-right: 1px solid $divider-color;
+  background-image: url("https://huhukey.github.io/images/side-backgroud.jpg");
 
   @include mobile {
     width: 100%;
@@ -349,7 +361,7 @@ img {
 }
 
 .site-info {
-  text-align:center;
+  text-align: center;
   margin: 100px auto 0;
 
   @include mobile {
@@ -359,7 +371,7 @@ img {
   }
 
   .site-avatar {
-    margin:0 auto;
+    margin: 0 auto;
     display: block;
     max-width: 200px;
     max-height: 200px;
@@ -396,8 +408,8 @@ img {
   }
 }
 
-.navlist{
-  text-align:center;
+.navlist {
+  text-align: center;
 }
 
 nav {
@@ -406,6 +418,7 @@ nav {
   font-family: $base-font;
   font-weight: 500;
   font-size: 18px;
+  text-shadow: 1px 1px 2px black;
 
   @include mobile {
     margin-top: 9px;
@@ -420,7 +433,7 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: $link-color;
+      color: $base-color;
     }
   }
 }
@@ -439,7 +452,7 @@ nav {
 
 // Posts
 
-.posts{
+.posts {
 
   .tag {
     display: inline;
@@ -457,13 +470,13 @@ nav {
       > a {
         margin: 3px 3px 3px 0;
         padding: .5px 4px;
-        color: $base-color;
+        color: $tags-color;
         background-color: $tag-index-label-background-color;
         border-radius: 3px;
 
         &:hover {
           color: $link-color;
-          background-color:$link-bghv-color;
+          background-color: $link-bghv-color;
         }
       }
     }
@@ -505,13 +518,12 @@ nav {
 }
 
 .page {
-//  margin: 40px;
+  //  margin: 40px;
 
   @include mobile {
-//    margin: 24px;
+    //    margin: 24px;
   }
 }
-
 
 
 // TOC
@@ -523,9 +535,9 @@ nav {
   position: fixed;
   z-index: 4;
   padding: 60px 20px 0 20px;
-  
-  &:before{
-    content:"目录";
+
+  &:before {
+    content: "目录";
     margin: 0 0 1em 1em;
     font-weight: 700;
     font-size: 1.2em;
@@ -534,17 +546,17 @@ nav {
     border-bottom: 3px double $divider-color;
   }
 
-  li:before{
-    content:"";
+  li:before {
+    content: "";
   }
 
-  @include mobile{
-    display:none;
+  @include mobile {
+    display: none;
   }
 }
 
-@media screen and (max-width:2200px) and (min-width:1200px){
-  .withtoc{
+@media screen and (max-width: 2200px) and (min-width: 1200px) {
+  .withtoc {
     padding-left: 260px;
   }
 }
@@ -564,6 +576,7 @@ nav {
   > .prev {
     float: left;
     width: 50%;
+
     a {
       color: $base-lighten-color;
       border: 1px solid $divider-color;
@@ -582,6 +595,7 @@ nav {
     float: right;
     text-align: right;
     width: 50%;
+
     a {
       color: $base-lighten-color;
       border: 1px solid $divider-color;
@@ -639,6 +653,7 @@ nav {
   a {
     color: $base-color;
   }
+
   time {
     color: $base-lighten-color;
     font-size: $small-font-size;
@@ -648,17 +663,16 @@ nav {
 }
 
 
-
 // Footer
 .wrapper-footer-desktop {
   margin-top: 50px;
   border-top: 1px solid $footer-border-color;
   background-color: $footer-background-color;
   position: absolute;
-  clear:both;
-  width:100%;
-  bottom:0;
-  
+  clear: both;
+  width: 100%;
+  bottom: 0;
+
   @include mobile {
     display: none;
   }
@@ -667,7 +681,7 @@ nav {
 
 .wrapper-footer-mobile {
   display: none;
-  
+
   @include mobile {
     display: block;
     width: 100%;
@@ -701,7 +715,7 @@ footer {
       height: 20px;
       width: 20px;
       fill: $base-lighten-color;
-      
+
       &:hover {
         fill: $link-lighten-color;
       }
